@@ -7,7 +7,7 @@ env:
 builds:
   - main: ./cmd/gaiad
     id: "gaiad"
-    binary: gaiad
+    binary: junod
     mod_timestamp: "{{ .CommitTimestamp }}"
     flags:
       - -tags=netgo ledger
