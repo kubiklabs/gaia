@@ -1,12 +1,12 @@
 ---
-project_name: juno
+project_name: gaia
 
 env:
   - GO111MODULE=on
 
 builds:
   - main: ./cmd/junod
-    id: "junod"
+    id: "gaiad"
     binary: junod
     mod_timestamp: "{{ .CommitTimestamp }}"
     flags:
