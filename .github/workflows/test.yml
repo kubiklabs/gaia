@@ -146,15 +146,15 @@ jobs:
       - uses: actions/setup-go@v4
         with:
           go-version: 1.20.x
-      # the old gaiad binary version is hardcoded, need to be updated each major release.
-      - name: Install Old Gaiad
+      # the old junod binary version is hardcoded, need to be updated each major release.
+      - name: Install Old junod
         run: |
           git checkout v13.0.0
           make build
           cp ./build/junod ./build/junodold
           go clean -modcache
         if: env.GIT_DIFF
-      - name: Install New Gaiad
+      - name: Install New junod
         run: |
           git checkout -
           make build
@@ -165,7 +165,7 @@ jobs:
         run: |
           go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest
         if: env.GIT_DIFF
-      - name: Start Old Gaiad Binary
+      - name: Start Old junod Binary
         run: |
           go env GOPATH
           ./contrib/scripts/upgrade_test_scripts/run_gaia.sh
