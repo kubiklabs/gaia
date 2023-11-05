@@ -1,6 +1,6 @@
 ARG IMG_TAG=latest
 
-# Compile the gaiad binary
+# Compile the junod binary
 FROM golang:1.20-alpine AS junod-builder
 WORKDIR /src/app/
 COPY go.mod go.sum* ./

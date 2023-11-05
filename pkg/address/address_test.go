@@ -18,13 +18,13 @@ func TestConvertBech32Prefix(t *testing.T) {
 		{
 			name:      "Convert valid bech 32 address",
 			address:   "akash1a6zlyvpnksx8wr6wz8wemur2xe8zyh0ytz6d88",
-			converted: "cosmos1a6zlyvpnksx8wr6wz8wemur2xe8zyh0yxeh27a",
-			prefix:    "cosmos",
+			converted: "juno1a6zlyvpnksx8wr6wz8wemur2xe8zyh0yxeh27a",
+			prefix:    "juno",
 		},
 		{
 			name:    "Convert invalid address",
 			address: "invalidaddress",
-			prefix:  "cosmos",
+			prefix:  "juno",
 			err:     errors.New("cannot decode invalidaddress address: decoding bech32 failed: invalid separator index -1"),
 		},
 	}

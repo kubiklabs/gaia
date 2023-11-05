@@ -24,36 +24,36 @@ else
 fi
 
 UPGRADE_VERSION=v$UPGRADE_VERSION_NUMBER
-NODE_HOME=$(realpath ./build/.gaia)
+NODE_HOME=$(realpath ./build/.juno)
 echo "NODE_HOME = ${NODE_HOME}"
-BINARY=$NODE_HOME/cosmovisor/genesis/bin/gaiad
+BINARY=$NODE_HOME/cosmovisor/genesis/bin/junod
 echo "BINARY = ${BINARY}"
 CHAINID=cosmoshub-4
 
 USER_MNEMONIC="abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon art"
 
-if ! test -f "./build/gaiadold"; then
-  echo "old gaiad binary does not exist"
+if ! test -f "./build/junodold"; then
+  echo "old junod binary does not exist"
   exit
 fi
 
-rm -rf ./build/.gaia
+rm -rf ./build/.juno
 
 mkdir -p "$NODE_HOME"/cosmovisor/genesis/bin
-cp ./build/gaiadold "$NODE_HOME"/cosmovisor/genesis/bin/gaiad
+cp ./build/junodold "$NODE_HOME"/cosmovisor/genesis/bin/junod
 $BINARY init upgrader --chain-id $CHAINID --home "$NODE_HOME"
 
-if ! test -f "./build/gaiadnew"; then
-  echo "new gaiad binary does not exist"
+if ! test -f "./build/junodnew"; then
+  echo "new junod binary does not exist"
   exit
 fi
 
 mkdir -p "$NODE_HOME"/cosmovisor/upgrades/$UPGRADE_VERSION/bin
-cp ./build/gaiadnew "$NODE_HOME"/cosmovisor/upgrades/$UPGRADE_VERSION/bin/gaiad
+cp ./build/junodnew "$NODE_HOME"/cosmovisor/upgrades/$UPGRADE_VERSION/bin/junod
 
 GOPATH=$(go env GOPATH)
 
-export DAEMON_NAME=gaiad
+export DAEMON_NAME=junod
 export DAEMON_HOME=$NODE_HOME
 COSMOVISOR=$GOPATH/bin/cosmovisor
 

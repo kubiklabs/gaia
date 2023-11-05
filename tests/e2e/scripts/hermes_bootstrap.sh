@@ -49,11 +49,11 @@ rpc_addr = 'http://$GAIA_A_E2E_VAL_HOST:26657'
 grpc_addr = 'http://$GAIA_A_E2E_VAL_HOST:9090'
 websocket_addr = 'ws://$GAIA_A_E2E_VAL_HOST:26657/websocket'
 rpc_timeout = '10s'
-account_prefix = 'cosmos'
+account_prefix = 'juno'
 key_name = 'rly01-gaia-a'
 store_prefix = 'ibc'
 max_gas = 6000000
-gas_price = { price = 0.00001, denom = 'uatom' }
+gas_price = { price = 0.00001, denom = 'ujuno' }
 gas_multiplier = 1.2
 clock_drift = '1m' # to accomdate docker containers
 trusting_period = '14days'
@@ -65,11 +65,11 @@ rpc_addr = 'http://$GAIA_B_E2E_VAL_HOST:26657'
 grpc_addr = 'http://$GAIA_B_E2E_VAL_HOST:9090'
 websocket_addr = 'ws://$GAIA_B_E2E_VAL_HOST:26657/websocket'
 rpc_timeout = '10s'
-account_prefix = 'cosmos'
+account_prefix = 'juno'
 key_name = 'rly01-gaia-b'
 store_prefix = 'ibc'
 max_gas =  6000000
-gas_price = { price = 0.00001, denom = 'uatom' }
+gas_price = { price = 0.00001, denom = 'ujuno' }
 gas_multiplier = 1.2
 clock_drift = '1m' # to accomdate docker containers
 trusting_period = '14days'

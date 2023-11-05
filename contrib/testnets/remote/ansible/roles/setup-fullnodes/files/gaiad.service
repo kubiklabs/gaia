@@ -1,14 +1,14 @@
 [Unit]
-Description=gaiad
+Description=junod
 Requires=network-online.target
 After=network-online.target
 
 [Service]
 Restart=on-failure
-User=gaiad
-Group=gaiad
+User=junod
+Group=junod
 PermissionsStartOnly=true
-ExecStart=/usr/bin/gaiad start
+ExecStart=/usr/bin/junod start
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGTERM
 

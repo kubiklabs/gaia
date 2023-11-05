@@ -2,14 +2,14 @@
 
 - name: Copy binary
   copy:
-    src: "{{GAIACLI_BINARY}}"
-    dest: /usr/bin/gaiacli
+    src: "{{JUNOCLI_BINARY}}"
+    dest: /usr/bin/junocli
     mode: 0755
-  notify: restart gaiacli
+  notify: restart junocli
 
 - name: Copy service
   template:
-    src: gaiacli.service.j2
-    dest: /etc/systemd/system/gaiacli.service
+    src: junocli.service.j2
+    dest: /etc/systemd/system/junocli.service
   notify: systemctl
 

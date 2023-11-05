@@ -9,11 +9,11 @@ echo "Need to add an upgrade height"
 exit 1
 fi
 
-NODE_HOME=$(realpath ./build/.gaia)
+NODE_HOME=$(realpath ./build/.juno)
 
 echo "NODE_HOME = ${NODE_HOME}"
 
-BINARY=$NODE_HOME/cosmovisor/genesis/bin/gaiad
+BINARY=$NODE_HOME/cosmovisor/genesis/bin/junod
 echo "BINARY = ${BINARY}"
 
 $BINARY version
@@ -72,5 +72,5 @@ $BINARY tx gov vote 1 yes \
 echo "Done \n"
 
 else
-echo "Please build gaia v9 and move to ./build/gaiad9"
+echo "Please build juno v9 and move to ./build/junod9"
 fi

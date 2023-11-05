@@ -27,7 +27,7 @@ import (
 
 // SimAppChainID hardcoded chainID for simulation
 const (
-	SimAppChainID = "gaia-app"
+	SimAppChainID = "juno-app"
 )
 
 // DefaultConsensusParams defines the default Tendermint consensus params used

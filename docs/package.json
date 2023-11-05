@@ -19,9 +19,9 @@
   "license": "ISC",
   "keywords": [
     "cosmos",
-    "gaia",
+    "juno",
     "cosmos hub",
-    "atom"
+    "juno"
   ],
   "devDependencies": {
     "picocolors": "^1.0.0"

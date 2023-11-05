@@ -9,11 +9,11 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-# NODE_HOME=./build/.gaia
-NODE_HOME=$(realpath ./build/.gaia)
+# NODE_HOME=./build/.juno
+NODE_HOME=$(realpath ./build/.juno)
 echo "NODE_HOME = ${NODE_HOME}"
 
-BINARY=$NODE_HOME/cosmovisor/genesis/bin/gaiad
+BINARY=$NODE_HOME/cosmovisor/genesis/bin/junod
 echo "BINARY = ${BINARY}"
 
 USER_MNEMONIC="abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon art"
@@ -70,5 +70,5 @@ if test -f "$BINARY"; then
   echo "Done \n"
 
 else
-  echo "Please build gaia v8 and move to ./build/gaiad8"
+  echo "Please build juno v8 and move to ./build/junod8"
 fi

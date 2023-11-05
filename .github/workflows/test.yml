@@ -117,7 +117,7 @@ jobs:
             **/**.go
             go.mod
             go.sum
-      - name: Install Gaia
+      - name: Install Juno
         run: |
           make build
         if: env.GIT_DIFF
@@ -151,14 +151,14 @@ jobs:
         run: |
           git checkout v13.0.0
           make build
-          cp ./build/gaiad ./build/gaiadold
+          cp ./build/junod ./build/junodold
           go clean -modcache
         if: env.GIT_DIFF
       - name: Install New Gaiad
         run: |
           git checkout -
           make build
-          cp ./build/gaiad ./build/gaiadnew
+          cp ./build/junod ./build/junodnew
           go clean -modcache
         if: env.GIT_DIFF
       - name: Install Cosmovisor

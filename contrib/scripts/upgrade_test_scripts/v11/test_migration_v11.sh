@@ -20,7 +20,7 @@ default_globalfee_params='
 }'
 
 # Get current global fee default params
-curr_params=$(curl -s $NODEADDR:1317/gaia/globalfee/v1beta1/params)
+curr_params=$(curl -s $NODEADDR:1317/juno/globalfee/v1beta1/params)
 
 # Check if retrieved params are equal to expected default params
 DIFF=$(diff  <(echo ${default_globalfee_params} | jq --sort-keys .) <(echo ${curr_params} | jq --sort-keys .))

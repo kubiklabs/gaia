@@ -29,11 +29,11 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-NODE_HOME=$(realpath ./build/.gaia)
+NODE_HOME=$(realpath ./build/.juno)
 
 echo "NODE_HOME = ${NODE_HOME}"
 
-BINARY=$NODE_HOME/cosmovisor/genesis/bin/gaiad
+BINARY=$NODE_HOME/cosmovisor/genesis/bin/junod
 echo "BINARY = ${BINARY}"
 
 $BINARY version
@@ -92,5 +92,5 @@ if test -f "$BINARY"; then
   --node tcp://localhost:26657
 
 else
-  echo "Please build old gaia binary and move to ./build/gaiadold"
+  echo "Please build old juno binary and move to ./build/junodold"
 fi
