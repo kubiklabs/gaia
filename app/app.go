@@ -91,7 +91,7 @@ func init() {
 		panic(err)
 	}
 
-	DefaultNodeHome = filepath.Join(userHomeDir, ".gaia")
+	DefaultNodeHome = filepath.Join(userHomeDir, ".juno")
 }
 
 // NewGaiaApp returns a reference to an initialized Gaia.

@@ -88,6 +88,18 @@ func initAppConfig() (string, interface{}) {
 func initRootCmd(rootCmd *cobra.Command, encodingConfig params.EncodingConfig) {
 	cfg := sdk.GetConfig()
 
+	bech32PrefixAccAddr := "juno"
+	bech32PrefixAccPub := "junopub"
+	bech32PrefixValAddr := "junovaloper"
+	bech32PrefixValPub := "junovaloperpub"
+	bech32PrefixConsAddr := "junovalcons"
+	bech32PrefixConsPub := "junovalconspub"
+
+	cfg.SetBech32PrefixForAccount(bech32PrefixAccAddr, bech32PrefixAccPub)
+	cfg.SetBech32PrefixForValidator(bech32PrefixValAddr, bech32PrefixValPub)
+	cfg.SetBech32PrefixForConsensusNode(bech32PrefixConsAddr, bech32PrefixConsPub)
+
+
 	cfg.Seal()
 
 	rootCmd.AddCommand(
