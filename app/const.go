@@ -1,5 +1,5 @@
 package gaia
 
 const (
-	appName = "JunoApp"
+	appName = "OsmosisApp"
 )
